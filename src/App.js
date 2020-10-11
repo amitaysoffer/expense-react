@@ -11,13 +11,10 @@ class App extends React.Component {
       expenseList: expenseData
     }
     this.addItem = this.addItem.bind(this);
-
   }
 
-  addItem = (item) => {
-    const newExpenseList = this.state.expenseList.concat(item);
-    this.setState({ expenseList: newExpenseList })
-    // console.log(item)
+  addItem = (newItem) => {
+    this.setState({ expenseList: [...this.state.expenseList, newItem] })
   }
 
   deleteItem = (id) => {
@@ -26,7 +23,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.expenseList)
     return (
       <div className="container">
         <Header />

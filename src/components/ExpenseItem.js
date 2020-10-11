@@ -8,7 +8,7 @@ class ExpenseItem extends Component {
         <td>{date}</td>
         <td>{category}</td>
         <td>{description}</td>
-        <td>{amount} {currency}</td>
+        <td>{amount}{currency}</td>
         <td>
           <button className="btn btn-danger" onClick={() => this.props.deleteItem(id)}>x</button>
         </td>
