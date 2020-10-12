@@ -15,7 +15,7 @@ function ExpenseList(props) {
   }
 
   return (
-    <div>
+    <div className="expense-list table-responsive">
       <h1 style={props.expenseList.length > 0 ? hideElement : styleHeader}>No Expenses Yet</h1>
       <table style={props.expenseList.length > 0 ? { marginTop: 30 } : hideElement} className="table table-striped table-hover table-light">
         <thead className="thead-light">
