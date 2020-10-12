@@ -7,10 +7,10 @@ class AddExpense extends Component {
     super()
     this.state = {
       date: this.addTodayDate(),
-      category: 'travel',
-      description: 'Some default value',
-      amount: '1',
-      currency: '$',
+      category: '',
+      description: '',
+      amount: '',
+      currency: '',
       id: Math.random()
     }
   }
@@ -27,7 +27,7 @@ class AddExpense extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    
+
     this.props.addItem(this.state);
 
     this.setState({
